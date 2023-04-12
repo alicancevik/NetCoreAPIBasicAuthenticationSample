@@ -14,8 +14,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IUserService,UserService>();
-//builder.Services.AddAuthentication()
-//    .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>(AuthenticationSchemes.Basic.ToString(),options => { });
 
 builder.Services.AddAuthentication(options =>
 {
@@ -30,8 +28,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-
 
 app.UseAuthentication();
 app.UseAuthorization();
